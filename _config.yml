@@ -25,10 +25,21 @@ show_excerpts: true
 excerpt_separator: <!--more-->
 
 # Build settings
+safe: true
 markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+exclude:
+  - Gemfile
+  - Gemfile.lock
+whitelist:
+  - jekyll-coffeescript
+  - jekyll-gist
+  - jekyll-mentions
+  - jekyll-paginate
+  - jekyll-redirect-from
 
 header_pages:
   - recommends.md
