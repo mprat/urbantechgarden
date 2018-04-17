@@ -1,0 +1,38 @@
+<footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">{{ site.title | escape }}</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            {{ site.author | escape }}
+            </li>
+            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          {%- include social.html -%}
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>{{ site.description | escape }}</p>
+      </div>
+
+      <div class="footer-col">
+        <i>Copyright 2018, Michele Pratusevich, Learnable LLC.</i>
+        <i>Hosted by <a href="http://pages.github.com" target="_blank">Github Pages.</a></i>
+      </div>
+
+      {% if jekyll.environment == "production" %}
+        {% include adsense.html %}
+      {% endif %}
+    </div>
+  </div>
+
+</footer>
